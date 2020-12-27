@@ -8,3 +8,5 @@ $LOAD_PATH.unshift(File.expand_path("../..", __FILE__))
 require "pry"
 
 require "test/support/factory"
+
+ENV["DASSETS_TEST_MODE"] = "yes"
