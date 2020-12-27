@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
+require "erubi"
+require "dassets/engine"
 require "dassets-erubi/version"
 
-module DassetsErubi
-  # TODO: your code goes here...
+module Dassets; end
+module Dassets::Erubi
 end

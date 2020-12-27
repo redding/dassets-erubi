@@ -5,12 +5,12 @@ require "dassets-erubi/version"
 
 Gem::Specification.new do |gem|
   gem.name        = "dassets-erubi"
-  gem.version     = DassetsErubi::VERSION
-  gem.authors     = ["TODO: authors"]
-  gem.email       = ["TODO: emails"]
-  gem.summary     = "TODO: Write a gem summary"
-  gem.description = "TODO: Write a gem description"
-  gem.homepage    = "TODO: homepage"
+  gem.version     = Dassets::Erubi::VERSION
+  gem.authors     = ["Kelly Redding", "Collin Redding"]
+  gem.email       = ["kelly@kellyredding.com", "collin.redding@me.com"]
+  gem.summary     = %q{Dassets engine to compile ERB using Erubi.}
+  gem.description = %q{Dassets engine to compile ERB using Erubi.}
+  gem.homepage    = "https://github.com/redding/dassets-erubi"
   gem.license     = "MIT"
 
   gem.files         = `git ls-files | grep "^[^.]"`.split($/)
@@ -22,5 +22,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency("assert", ["~> 2.19.0"])
 
-  # TODO: gem.add_dependency("gem-name", ["~> 0.0.0"])
+  gem.add_dependency("dassets", ["~> 0.14.5"])
+  gem.add_dependency("erubi", ["~> 1.10"])
 end

@@ -1,10 +1,26 @@
-# DassetsErubi
+# Dassets::Erubi
 
-TODO: Write a gem description
+Dassets [engine](https://github.com/redding/dassets#compiling) to compile dynamic asset files written with ERB using [Erubi](https://github.com/jeremyevans/erubi).
+
+This is a clone of [Dassets::Erb](https://github.com/redding/dassets-erb) but uses Erubi to do the compilation.
 
 ## Usage
 
-TODO: Write code samples and usage instructions here
+Register the engine:
+
+```ruby
+# in config/assets.rb
+require "dassets"
+require "dassets-erubi"
+
+Dassets.configure do |c|
+  c.source "/path/to/assets") do |s|
+    s.engine "erb", Dassets::Erubi::Engine
+  end
+end
+```
+
+Add `.erb` to any source files in your source path.  Dassets will compile their content using Erubi, remove the `.erb` extension, and write the output to the output path.
 
 ## Installation
 
