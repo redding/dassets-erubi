@@ -22,6 +22,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency("assert", ["~> 2.19.0"])
 
-  gem.add_dependency("dassets", ["~> 0.14.5"])
+  gem.add_dependency("dassets", ["~> 0.15.0"])
   gem.add_dependency("erubi", ["~> 1.10"])
 end
