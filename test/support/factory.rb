@@ -1,19 +1,19 @@
+# frozen_string_literal: true
+
 require "assert/factory"
 
 module Factory
   extend Assert::Factory
 
-  module_function
-
-  def name
+  def self.name
     "Joe"
   end
 
-  def erb
+  def self.erb
     "hello, <%= Factory.name %>!"
   end
 
-  def erb_compiled
+  def self.erb_compiled
     "hello, Joe!"
   end
 end

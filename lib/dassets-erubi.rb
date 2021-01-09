@@ -5,6 +5,7 @@ require "dassets/engine"
 require "dassets-erubi/version"
 
 module Dassets::Erubi; end
+
 class Dassets::Erubi::Engine < Dassets::Engine
   def self.ERB_EXTENSIONS
     ["erb", "erubis", "erubi"]
@@ -17,6 +18,8 @@ class Dassets::Erubi::Engine < Dassets::Engine
   end
 
   def compile(input_content)
-    eval(::Erubi::Engine.new(input_content, freeze: true).src)
+    eval( # rubocop:disable Security/Eval
+      ::Erubi::Engine.new(input_content, freeze: true).src,
+    )
   end
 end
